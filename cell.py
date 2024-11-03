@@ -24,15 +24,27 @@ class Cell:
         if self.has_left_wall:
             line = Line(top_left, bottom_left)
             self._win.draw_line(line)
+        else:
+            line = Line(top_left, bottom_left)
+            self._win.draw_line(line, "white")
         if self.has_right_wall:
             line = Line(top_right, bottom_right)
             self._win.draw_line(line)
+        else:
+            line = Line(top_right, bottom_right)
+            self._win.draw_line(line, "white")
         if self.has_top_wall:
             line = Line(top_right, top_left)
             self._win.draw_line(line)
+        else:
+            line = Line(top_right, top_left)
+            self._win.draw_line(line, "white")
         if self.has_bottom_wall:
             line = Line(bottom_right, bottom_left)
             self._win.draw_line(line)
+        else:
+            line = Line(bottom_right, bottom_left)
+            self._win.draw_line(line, "white")
     
     def draw_move(self, to_cell, undo=False):
         self_center_point = Point((self._x1+self._x2)/2, (self._y1+self._y2)/2)
