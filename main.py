@@ -15,7 +15,8 @@ def main():
 
     maze = Maze(margin, margin, num_rows, num_cols, cell_size_x, cell_size_y, win)
 
-    maze._create_cells()
+    print(len(maze._cells), num_cols)
+    print(len(maze._cells[0]), num_rows)
 
     win.wait_for_close()
 
